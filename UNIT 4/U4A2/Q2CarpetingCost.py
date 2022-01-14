@@ -4,6 +4,10 @@
 # PURPOSE OF PROGRAM: Calculating carpet cost 
 
 # VARIABLE DEFINITION
+length = 0
+width = 0
+area = 0
+cost = 0
 
 # INPUT
 print("Hello User! Please enter the length and width measurements to   calculate the cost.")
