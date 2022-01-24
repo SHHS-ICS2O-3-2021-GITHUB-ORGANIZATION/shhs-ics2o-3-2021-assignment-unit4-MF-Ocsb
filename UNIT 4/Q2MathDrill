@@ -1,0 +1,65 @@
+# NAME OF AUTHOR: Matthew F
+# NAME OF THE PROGRAM:  Q2 Math Drill
+# DATE OF CREATION: 01/24/2022
+# PURPOSE OF PROGRAM: Provide math problems
+
+# VARIABLE DEFINITION
+import random 
+# A surprise tool that will help us later
+from random import randint
+
+num1 = 0
+num2 = 0
+ans = 0
+resp = 0
+quest = 0
+score = 0
+
+# INPUT
+input("Press enter to begin your math practice.\nEnter '0' at any time to exit the program.")
+
+# PROCESSING
+while True:
+    # Add or multiply
+    quest = randint(1,2)
+    if quest == 1:
+        # Generate question
+        num1 = randint(1,100)
+        num2 = randint(1,100)
+        num1 = str(num1)
+        num2 = str(num2)
+        print(num1 + '+' + num2)
+        num1 = int(num1)
+        num2 = int(num2)
+        ans = num1 + num2
+        resp = int(input("Answer: "))
+        # Give feedback (OUTPUT)
+        if resp != ans:
+            print("Incorrect, try again.")
+        elif resp == ans:
+            score = score + 1
+            print("Congratulations! Score:")
+            print(score)
+        elif resp == 0:
+            quit()
+            
+    if quest == 2:
+        # Generate question
+        num1 = randint(1,12)
+        num2 = randint(1,12)
+        num1 = str(num1)
+        num2 = str(num2)
+        print(num1 + 'x' + num2)
+        num1 = int(num1)
+        num2 = int(num2)
+        ans = num1 * num2
+        resp = int(input("Answer: "))
+        # Give feedback (OUTPUT)
+        if resp != ans:
+            print("Incorrect, try again.")
+        elif resp == ans:
+            score = score + 1
+            print("Congratulations! Score:")
+            print(score)
+        elif ans == 0:
+            quit()
