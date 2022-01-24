@@ -34,14 +34,15 @@ while True:
         ans = num1 + num2
         resp = int(input("Answer: "))
         # Give feedback (OUTPUT)
-        if resp != ans:
+        if resp == 0:
+            quit()
+        elif resp != ans:
             print("Incorrect, try again.")
         elif resp == ans:
             score = score + 1
             print("Congratulations! Score:")
             print(score)
-        elif resp == 0:
-            quit()
+        
             
     if quest == 2:
         # Generate question
@@ -55,11 +56,11 @@ while True:
         ans = num1 * num2
         resp = int(input("Answer: "))
         # Give feedback (OUTPUT)
-        if resp != ans:
+        if ans == 0:
+            quit()
+        elif resp != ans:
             print("Incorrect, try again.")
         elif resp == ans:
             score = score + 1
             print("Congratulations! Score:")
             print(score)
-        elif ans == 0:
-            quit()
