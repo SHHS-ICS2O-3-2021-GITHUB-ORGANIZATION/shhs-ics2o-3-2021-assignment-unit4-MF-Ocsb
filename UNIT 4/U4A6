@@ -1,0 +1,33 @@
+# NAME OF AUTHOR: Matthew F
+# NAME OF THE PROGRAM: Guess The Number
+# DATE OF CREATION:  January 24th 2022
+# PURPOSE OF PROGRAM: To generate random numbers to be guessed
+
+# VARIABLE DEFINITION
+import random
+from random import randint
+foo = 0
+bar = 0
+start_Range = 0
+end_Range = 0
+userContinue = 1
+userGuesses = 1
+
+# INPUT
+start_Range = int(input("Welcome, user! Please enter a starting range for the guessing game!"))
+end_Range = int(input("Now enter a higher number for the end of the range!"))
+
+# PROCESSING
+foo = randint(start_Range, end_Range)
+
+# OUTPUT
+while userContinue == 1:
+    bar = int(input("Guess a number from 1-10!"))
+    if foo == bar:
+        print("Correct!")
+        userGuesses = str(userGuesses)
+        print(("You guessed ") + userGuesses + (" times!"))
+        userContinue = 0
+    else:
+        print("Incorrect! Try again!")
+        userGuesses = userGuesses + 1
