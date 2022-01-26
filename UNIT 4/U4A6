@@ -14,20 +14,25 @@ userContinue = 1
 userGuesses = 1
 
 # INPUT
+# Obtain the range for the random int
 start_Range = int(input("Welcome, user! Please enter a starting range for the guessing game!"))
-end_Range = int(input("Now enter a higher number for the end of the range!"))
+end_Range = int(input("Now enter a higher number for the end of the range!")) 
 
 # PROCESSING
 foo = randint(start_Range, end_Range)
+# Convert to str to be used in a print
+start_Range = str(start_Range)
+end_Range = str(end_Range)
 
 # OUTPUT
 while userContinue == 1:
-    bar = int(input("Guess a number from 1-10!"))
+    bar = int(input(("Guess a number from ") + start_Range + ("-") + end_Range + ("!")))
     if foo == bar:
         print("Correct!")
         userGuesses = str(userGuesses)
         print(("You guessed ") + userGuesses + (" times!"))
         userContinue = 0
     else:
+        # If wrong increase the guess score
         print("Incorrect! Try again!")
         userGuesses = userGuesses + 1
